@@ -15,7 +15,7 @@ def translation_en_zh_api():
 	try:
 		return dumps({
 			'translation': en_zh(text_for_translation)
-		})
+		}, ensure_ascii=False)
 	except:
 		return dumps({'error': 'Error occurred during translation'})
 
@@ -25,7 +25,7 @@ def translation_zh_en_api():
 	try:
 		return dumps({
 			'translation': zh_en(text_for_translation)
-		})
+		}, ensure_ascii=False)
 	except:
 		return dumps({'error': 'Error occurred during translation'})
 
